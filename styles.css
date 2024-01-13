@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgba(60, 33, 124, 0.505);
+}
+
+img {
+  cursor: pointer;
+  padding: 4px;
+  width: 100px;
+  height: 100px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  max-width: fit-content;
+  margin: 0 auto; /* Center the grid horizontally */
+  padding: 10px; /* Add padding if needed */
+}
+
+#grid img.matched {
+  filter: grayscale(80%);
+  pointer-events: none; /* Disable clicking on matched cards */
+}
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  img {
+    width: 80px; /* Adjust the width of the images for smaller screens */
+    height: 80px; /* Adjust the height of the images for smaller screens */
+  }
+
+  #grid {
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* Keep the 7x7 grid on smaller screens */
+    padding: 25px;
+  }
+}
+
+#play-again {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: white;
+  margin: 20px auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+#play-again:hover {
+  background-color: #45a049;
+}
